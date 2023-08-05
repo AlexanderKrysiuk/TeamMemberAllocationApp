@@ -1,4 +1,6 @@
 import { useState } from "react";
+import femaleProfile from './images/femaleProfile.jpg';
+import maleProfile from './images/maleProfile.jpg';
 const Employees = () => {
     const [employees,setEmployees] = useState([
         {
@@ -87,12 +89,16 @@ const Employees = () => {
         }
     ]);
     return(
-        <main>
-            {
-                employees.map((employees) => (
-                    <p>{employees.fullName}</p>
-                ))
-            }
+        <main className="container">
+            <div>
+                <div>
+                    {
+                        employees.map((employees) => (
+                            <p>{employees.fullName}</p>
+                            ))
+                    }
+                </div>
+            </div>
         </main>
     )
 }
